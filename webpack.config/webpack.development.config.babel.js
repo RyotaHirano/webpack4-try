@@ -14,24 +14,8 @@ const plugins = [
 module.exports = merge(baseConfig, {
   mode: 'development',
   plugins,
-  module: {
-    rules: [
-      {
-        test: /\.(jpe?g|png|svg|gif|ico)$/,
-        use:
-          [
-            {
-              loader: 'url-loader',
-              options: {
-                limit: 9000
-              }
-            }
-          ]
-      }
-    ]
-  },
   devServer: {
-    contentBase: rootResolve('public'),
+    contentBase: rootResolve('dist'),
     publicPath: '/',
     inline: true,
     hot: true,

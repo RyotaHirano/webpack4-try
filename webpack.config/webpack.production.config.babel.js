@@ -5,8 +5,9 @@ const baseConfig = require('./webpack.base.config.babel.js')
 
 const plugins = [
   new ExtractTextPlugin({
-    disable: false
-  })
+    filename: 'assets/css/style.[hash].css',
+    allChunks: true
+  }),
 ]
 
 module.exports = merge(baseConfig, {
