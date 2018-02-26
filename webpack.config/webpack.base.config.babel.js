@@ -13,7 +13,7 @@ const plugins = [
 module.exports = {
   entry: './src/js/main.js',
   output: {
-    path: path.resolve(__dirname, 'build'),
+    path: path.resolve(__dirname, './../build'),
     publicPath: '',
     filename: 'assets/js/[name].js'
   },
@@ -31,6 +31,10 @@ module.exports = {
   plugins,
   module: {
     rules: [
+      {
+        test: /\.html$/,
+        use: 'html-loader'
+      },
       {
         test: /\.js$/,
         exclude: /node_modules/,
@@ -58,7 +62,10 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: 'assets/[path][name].[ext]'
+              name: '[path][name].[ext]',
+              outputPath : path => {
+                return `assets${path.replace('src', '')}`
+              }
             }
           },
           {

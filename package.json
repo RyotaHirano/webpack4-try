@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "start": "webpack-dev-server --progress --open --config webpack.config/webpack.development.config.babel.js",
-    "clean": "rm -rf ./public",
+    "clean": "rm -rf ./build",
     "build": "npm run clean && webpack --progress --hide-modules --config webpack.config/webpack.production.config.babel.js"
   },
   "engines": {
@@ -24,10 +24,11 @@
     "css-loader": "^0.28.4",
     "css-mqpacker": "^5.0.1",
     "eslint": "^4.1.1",
-    "eslint-loader": "^1.8.0",
+    "eslint-loader": "^2.0.0",
     "eslint-plugin-babel": "^4.1.1",
     "extract-text-webpack-plugin": "^4.0.0-alpha.0",
     "file-loader": "^1.1.9",
+    "html-loader": "^0.5.5",
     "html-webpack-plugin": "webpack-contrib/html-webpack-plugin",
     "image-webpack-loader": "^4.1.0",
     "node-sass": "^4.5.3",
