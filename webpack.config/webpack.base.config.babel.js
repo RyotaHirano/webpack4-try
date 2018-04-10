@@ -6,7 +6,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const plugins = [
   new webpack.HotModuleReplacementPlugin(),
   new HtmlWebpackPlugin({
-    template: `src/html/index.html`,
+    template: `src/html/index.pug`
   })
 ]
 
@@ -84,6 +84,18 @@ module.exports = {
                 quality: '65-90',
                 speed: 4,
               },
+            }
+          }
+        ]
+      },
+      {
+        test: /\.pug$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'pug-loader',
+            options: {
+              pretty: true
             }
           }
         ]
