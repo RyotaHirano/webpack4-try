@@ -2,12 +2,12 @@
   "name": "webpack4-try",
   "private": true,
   "scripts": {
-    "start": "webpack-dev-server --progress --open --config webpack.config/webpack.development.config.babel.js",
+    "start": "webpack-serve --log-time --open --config webpack.config/webpack.development.config.babel.js",
     "clean": "rm -rf ./build",
     "build": "npm run clean && webpack --progress --hide-modules --config webpack.config/webpack.production.config.babel.js"
   },
   "engines": {
-    "node": "^8.4.0"
+    "node": "^8.11.1"
   },
   "repository": {
     "type": "git",
@@ -41,7 +41,7 @@
     "uglifyjs-webpack-plugin": "^1.2.2",
     "webpack": "^4.0.0",
     "webpack-cli": "^2.0.4",
-    "webpack-dev-server": "^3.0.0",
-    "webpack-merge": "^4.1.1"
+    "webpack-merge": "^4.1.1",
+    "webpack-serve": "^1.0.2"
   }
 }
