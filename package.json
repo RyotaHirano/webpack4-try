@@ -7,20 +7,21 @@
     "build": "npm run clean && webpack --progress --hide-modules --config webpack.config/webpack.production.config.babel.js"
   },
   "engines": {
-    "node": "^8.11.1"
+    "node": "^8.11.2"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/RyotaHirano/webpack4-try.git"
   },
   "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.49",
+    "@babel/core": "^7.0.0-beta.49",
+    "@babel/plugin-transform-runtime": "^7.0.0-beta.49",
+    "@babel/preset-env": "^7.0.0-beta.49",
+    "@babel/register": "^7.0.0-beta.49",
     "autoprefixer": "^6.7.0",
-    "babel-core": "^6.18.2",
-    "babel-eslint": "^7.2.3",
-    "babel-loader": "^7.1.0",
-    "babel-plugin-transform-runtime": "^6.15.0",
-    "babel-preset-env": "^1.6.1",
-    "babel-runtime": "^6.18.0",
+    "babel-eslint": "^8.2.3",
+    "babel-loader": "^8.0.0-beta.3",
     "css-loader": "^0.28.4",
     "css-mqpacker": "^5.0.1",
     "eslint": "^4.1.1",
